@@ -1,13 +1,126 @@
 # ! JUST READ - don't change the content of this file
 # Question structure extracted from survey.html
-penguins:
+engage1:
   type: mc
-  label: Which type of penguin do you like the best?
+  label: How would you describe your current level of engagement with MPPAW?
   options:
-    Adélie: adelie
-    Chinstrap: chinstrap
-    Gentoo: gentoo
-silly_word:
-  type: text
-  label: 'Write a silly word here:'
+    Very active (attend most events, volunteer regularly): '5'
+    Moderately active (attend some events, occasional volunteering): '4'
+    Minimally active (attend rarely, no volunteering): '3'
+    Not currently active but interested in re-engaging: '2'
+    Not currently active and unlikely to re-engage: '1'
+engage2:
+  type: mc_multiple
+  label: What initially motivated you to join MPPAW? (Select all that apply)
+  options:
+    Professional networking: networking
+    Learning from expert speakers: learning
+    Career development opportunities: development
+    Mentorship (giving or receiving): mentorship
+    Contributing to the applied psychology community: contributing
+    Student/early career support: students
+    Other: other
+engage3:
+  type: mc_multiple
+  label: Which of these factors, if any, have reduced your participation in MPPAW
+    activities? (Select all that apply)
+  options:
+    Time constraints/busy schedule: constraints
+    Event timing doesn't work for me: timing
+    Content not relevant to my current needs: content
+    Prefer online professional communities (LinkedIn, Reddit, etc.): communities
+    Geographic distance/location issues: distance
+    Post-pandemic preference for virtual engagement -- Other priorities took precedence: covid
+    Events don't provide enough networking opportunity: networking
+    Other: other
+top1:
+  type: select
+  label: Which of the following program formats would be most valuable to you? (Top
+    choice)
+  options:
+    Expanded mentorship program (structured mentor/mentee matching): mentor
+    Large annual networking event/conference: network
+    Quarterly intensive workshops (3-4 per year): workshop
+    Career development events (panels, job fairs): development
+    Special interest groups (small, focused topic groups): interest
+    Community service/giving back projects: giving
+    Virtual networking sessions: virtual
+    Professional development certification programs: certification
+    Other: other
+top2:
+  type: select
+  label: Which of the following program formats would be second most valuable to you?
+    (second best choice)
+  options:
+    Expanded mentorship program (structured mentor/mentee matching): mentor
+    Large annual networking event/conference: network
+    Quarterly intensive workshops (3-4 per year): workshop
+    Career development events (panels, job fairs): development
+    Special interest groups (small, focused topic groups): interest
+    Community service/giving back projects: giving
+    Virtual networking sessions: virtual
+    Professional development certification programs: certification
+    Other: other
+top3:
+  type: select
+  label: Which of the following program formats would be third most valuable to you?
+    (third best choice)
+  options:
+    Expanded mentorship program (structured mentor/mentee matching): mentor
+    Large annual networking event/conference: network
+    Quarterly intensive workshops (3-4 per year): workshop
+    Career development events (panels, job fairs): development
+    Special interest groups (small, focused topic groups): interest
+    Community service/giving back projects: giving
+    Virtual networking sessions: virtual
+    Professional development certification programs: certification
+    Other: other
+mentor1:
+  type: mc
+  label: Would you be likely to participate as a mentor?
+  options:
+    Yes, definitely: definitely
+    Yes, possibly depending on time commitment: possibly
+    No, but I might in the future: future
+    'No': 'no'
+mentor2:
+  type: mc
+  label: Would you be likely to participate as a mentee?
+  options:
+    Yes, definitely: definitely
+    Yes, possibly depending on the match: possibly
+    No, but I might in the future: future
+    'No': 'no'
+mentor3:
+  type: mc
+  label: What mentoring time commitment works best for your schedule?
+  options:
+    1--3 months: '1'
+    3--6 months: '3'
+    6--12 months: '6'
+    Ongoing/flexible timing: flex
+mentor4:
+  type: mc_multiple
+  label: What mentoring structure do you prefer? (Select all that apply)
+  options:
+    One-on-one mentoring: '1'
+    Small group mentoring (3-5 people): small
+    Large group mentoring circles (6+ people): large
+    Peer-to-peer mentoring networks: networks
+mentor5:
+  type: mc_multiple
+  label: What level of mentoring formality works best for you? (Select all that apply)
+  options:
+    Structured program with set goals and milestones: structured
+    Semi-structured with some guidelines but flexibility: semi
+    Informal relationship-building and advice sharing: informal
+    Event-based networking opportunities: event
+mentor6:
+  type: mc_multiple
+  label: What mentoring format(s) would you participate in? (Select all that apply)
+  options:
+    Virtual meetings only: virtual
+    In-person meetings only: inperson
+    Hybrid (combination of virtual and in-person): hybrid
+    Asynchronous communication (email, messaging platforms): asynch
 

@@ -2,7 +2,7 @@
 format: html
 echo: false
 warning: false
-footer-left: "Made with {{< iconify skill-icons:r-light >}} via  [surveydown](https://surveydown.org)"
+footer-left: "[MPPAW](https://mppaw.org/) 2025 Survey"
 footer-right: '[<i class="bi bi-github"></i> Source Code](https://github.com/jtkulas/MPPAW25)'
 ---
 
@@ -12,26 +12,73 @@ library(surveydown)
 
 ::: {.sd_page id=welcome}
 
-# Default Template
+![](mppaw.jfif)
 
-Welcome to surveydown! This is a default template of a surveydown survey. It has two pages with one question on each page.
+# MPPAW Member Survey: Shaping Our Future Direction
 
-Here is a basic "multiple choice" question:
+## Introduction
+
+MPPAW is at a crossroads. We're evaluating our programming and structure to determine if there is a viable path to increase member engagement. Your input will directly shape our priorities for the coming year. This survey should take about 10 minutes to complete.
+
+```{r}
+sd_next(label="Begin Survey")
+```
+
+:::
+
+::: {.sd_page}
+
+### Current Engagement & Value: 
 
 ```{r}
 sd_question(
   type  = 'mc',
-  id    = 'penguins',
-  label = "Which type of penguin do you like the best?",
+  id    = 'engage1',
+  label = "How would you describe your current level of engagement with MPPAW?",
   option = c(
-    'Adélie'    = 'adelie',
-    'Chinstrap' = 'chinstrap',
-    'Gentoo'    = 'gentoo'
+    'Very active (attend most events, volunteer regularly)'    = "5",
+    'Moderately active (attend some events, occasional volunteering)' = "4",
+    'Minimally active (attend rarely, no volunteering)'        = "3",
+    'Not currently active but interested in re-engaging'       = "2",
+    'Not currently active and unlikely to re-engage'           = "1"
   )
 )
 ```
 
-You need to insert next buttons with `sd_next()` on each page. By default, it will go to the next page defined in the `survey.qmd` file, but you can also specify the page with the `next_page` argument set to the name of the page you want to go to next.
+```{r}
+sd_question(
+  type  = 'mc_multiple',
+  id    = 'engage2',
+  label = "What initially motivated you to join MPPAW? (Select all that apply)",
+  option = c(
+    'Professional networking'                 = "networking",
+    'Learning from expert speakers'           = "learning",
+    'Career development opportunities'        = "development",
+    'Mentorship (giving or receiving)'        = "mentorship",
+    'Contributing to the applied psychology community'           = "contributing",
+    'Student/early career support'            = "students",
+    'Other'                                   = "other"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc_multiple',
+  id    = 'engage3',
+  label = "Which of these factors, if any, have reduced your participation in MPPAW activities? (Select all that apply)",
+  option = c(
+    'Time constraints/busy schedule'                 = "constraints",
+    "Event timing doesn't work for me"           = "timing",
+    'Content not relevant to my current needs'        = "content",
+    'Prefer online professional communities (LinkedIn, Reddit, etc.)'        = "communities",
+    'Geographic distance/location issues'           = "distance",
+    'Post-pandemic preference for virtual engagement -- Other priorities took precedence'            = "covid",
+    "Events don't provide enough networking opportunity" = "networking",
+    'Other'                                   = "other"
+  )
+)
+```
 
 ```{r}
 sd_next(next_page = 'page2')
@@ -41,21 +88,172 @@ sd_next(next_page = 'page2')
 
 ::: {.sd_page id=page2}
 
-This is another page in your survey.
+### Future Programming Priorities: 
 
-{surveydown} supports many types of questions. For example, here is a simple `text` type question:
+Across the next three questions you'll be asked to rank your top 3 program formatting preferences:
 
 ```{r}
 sd_question(
-  type  = "text",
-  id    = "silly_word",
-  label = "Write a silly word here:"
+  type  = 'select',
+  id    = 'top1',
+  label = "Which of the following program formats would be **most** valuable to you? (Top choice)
+",
+  option = c(
+    "Expanded mentorship program (structured mentor/mentee matching)" = "mentor",
+    "Large annual networking event/conference"           = "network",
+    "Quarterly intensive workshops (3-4 per year)"       = "workshop",
+    "Career development events (panels, job fairs)"               = "development",
+    "Special interest groups (small, focused topic groups)"       = "interest",
+    "Community service/giving back projects"              = "giving",
+    "Virtual networking sessions"                         = "virtual",
+    "Professional development certification programs"     = "certification",
+    "Other"                                               = "other"
+  )
 )
+```
 
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'top2',
+  label = "Which of the following program formats would be **second most** valuable to you? (second best choice)
+",
+  option = c(
+    "Expanded mentorship program (structured mentor/mentee matching)" = "mentor",
+    "Large annual networking event/conference"           = "network",
+    "Quarterly intensive workshops (3-4 per year)"       = "workshop",
+    "Career development events (panels, job fairs)"               = "development",
+    "Special interest groups (small, focused topic groups)"       = "interest",
+    "Community service/giving back projects"              = "giving",
+    "Virtual networking sessions"                         = "virtual",
+    "Professional development certification programs"     = "certification",
+    "Other"                                               = "other"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'select',
+  id    = 'top3',
+  label = "Which of the following program formats would be **third most** valuable to you? (third best choice)
+",
+  option = c(
+    "Expanded mentorship program (structured mentor/mentee matching)" = "mentor",
+    "Large annual networking event/conference"           = "network",
+    "Quarterly intensive workshops (3-4 per year)"       = "workshop",
+    "Career development events (panels, job fairs)"               = "development",
+    "Special interest groups (small, focused topic groups)"       = "interest",
+    "Community service/giving back projects"              = "giving",
+    "Virtual networking sessions"                         = "virtual",
+    "Professional development certification programs"     = "certification",
+    "Other"                                               = "other"
+  )
+)
+```
+
+```{r}
 sd_next()
 ```
 
 :::
+
+::: {.sd_page}
+
+### Mentorship: 
+
+The next 6 questions all regard the [MPPAW mentorship program](https://mppaw.org/mentoring).
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'mentor1',
+  label = "Would you be likely to participate as a *mentor*?",
+  option = c(
+    "Yes, definitely"                             = "definitely",
+    "Yes, possibly depending on time commitment"  = "possibly",
+    "No, but I might in the future"               = "future",
+    "No"                                          = "no"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'mentor2',
+  label = "Would you be likely to participate as a *mentee*?",
+  option = c(
+    "Yes, definitely"                             = "definitely",
+    "Yes, possibly depending on the match"        = "possibly",
+    "No, but I might in the future"               = "future",
+    "No"                                          = "no"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'mentor3',
+  label = "What mentoring time commitment works best for your schedule?",
+  option = c(
+    "1-3 months"                = "1",
+    "3-6 months"                = "3",
+    "6-12 months"               = "6",
+    "Ongoing/flexible timing"    = "flex"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc_multiple',
+  id    = 'mentor4',
+  label = "What mentoring structure do you prefer? (Select all that apply)",
+  option = c(
+    "One-on-one mentoring"                      = "1",
+    "Small group mentoring (3-5 people)"        = "small",
+    "Large group mentoring circles (6+ people)" = "large",
+    "Peer-to-peer mentoring networks"           = "networks"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc_multiple',
+  id    = 'mentor5',
+  label = "What level of mentoring formality works best for you? (Select all that apply)",
+  option = c(
+    "Structured program with set goals and milestones"        = "structured",
+    "Semi-structured with some guidelines but flexibility"    = "semi",
+    "Informal relationship-building and advice sharing"       = "informal",
+    "Event-based networking opportunities"                    = "event"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc_multiple',
+  id    = 'mentor6',
+  label = "What mentoring format(s) would you participate in? (Select all that apply)",
+  option = c(
+    "Virtual meetings only"                                   = "virtual",
+    "In-person meetings only"                                 = "inperson",
+    "Hybrid (combination of virtual and in-person)"           = "hybrid",
+    "Asynchronous communication (email, messaging platforms)" = "asynch"
+  )
+)
+```
+
+```{r}
+sd_next()
+```
+
+:::
+
 
 ::: {.sd_page id=end}
 
