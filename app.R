@@ -41,17 +41,17 @@ server <- function(input, output, session) {
 
   # Define any conditional display logic here (show a question if a condition is true)
   sd_show_if(
-    input$engage2 == "other" ~ "engage2_other", 
-    input$engage3 == "other" ~ "engage3_other",
-    input$top1 == "other" ~ "top1_other",
-    input$top2 == "other" ~ "top2_other",
-    input$top3 == "other" ~ "top3_other",
-    input$contribute2 == "other" ~ "contribute2_other",
-    input$structure3 == "other" ~ "structure3_other",
-    input$structure4 == "other" ~ "structure4_other",
-    input$demo3 == "other" ~ "demo3_other"
-    )
-
+    !is.null(input$engage2) && isTRUE(any(tolower(input$engage2) == "other")) ~ "engage2_other", 
+    !is.null(input$engage3) && isTRUE(any(tolower(input$engage3) == "other")) ~ "engage3_other",
+    !is.null(input$top1) && isTRUE(any(tolower(input$top1) == "other")) ~ "top1_other",
+    !is.null(input$top2) && isTRUE(any(tolower(input$top2) == "other")) ~ "top2_other",
+    !is.null(input$top3) && isTRUE(any(tolower(input$top3) == "other")) ~ "top3_other",
+    !is.null(input$contribute2) && isTRUE(any(tolower(input$contribute2) == "other")) ~ "contribute2_other",
+    !is.null(input$structure3) && isTRUE(any(tolower(input$structure3) == "other")) ~ "structure3_other",
+    !is.null(input$structure4) && isTRUE(any(tolower(input$structure4) == "other")) ~ "structure4_other",
+    !is.null(input$demo3) && isTRUE(any(tolower(input$demo3) == "other")) ~ "demo3_other"
+  )
+  
   # Database designation and other settings
   sd_server(
     db = db

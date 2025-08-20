@@ -14,7 +14,9 @@ library(surveydown)
 
 ::: {.sd_page id=welcome}
 
+<div style="text-align: center;">
 ![](mppaw.jfif)
+</div>
 
 # MPPAW Member Survey: Shaping Our Future Direction
 
@@ -30,7 +32,7 @@ sd_next(label="Begin Survey")
 
 ::: {.sd_page}
 
-### Current Engagement & Value: 
+### Current Engagement & Value {{< iconify streamline-color:heart-rate-pulse-graph >}}: 
 
 ```{r}
 sd_question(
@@ -67,8 +69,9 @@ sd_question(
 sd_question(
   type  = "text",
   id    = "engage2_other", 
-  label = "Please specify the motivation:"
+  label = "Please specify the other motivation:"
 )
+
 ```
 
 ```{r}
@@ -92,7 +95,7 @@ sd_question(
 sd_question(
   type  = "text",
   id    = "engage3_other", 
-  label = "Please specify the factor(s):"
+  label = "Please specify the other factor(s):"
 )
 ```
 
@@ -104,7 +107,7 @@ sd_next(next_page = 'page2')
 
 ::: {.sd_page id=page2}
 
-### Future Programming Priorities: 
+### Future Programming Priorities {{< iconify streamline-color:hand-held-tablet-writing >}}: 
 
 Please rank your **top 3** program formatting preferences:
 
@@ -131,7 +134,7 @@ sd_question(
 sd_question(
   type  = "text",
   id    = "top1_other", 
-  label = "Please specify the format:"
+  label = "Please specify the other format:"
 )
 ```
 
@@ -158,7 +161,7 @@ sd_question(
 sd_question(
   type  = "text",
   id    = "top2_other", 
-  label = "Please specify the format:"
+  label = "Please specify the other format:"
 )
 ```
 
@@ -185,7 +188,7 @@ sd_question(
 sd_question(
   type  = "text",
   id    = "top3_other", 
-  label = "Please specify the format:"
+  label = "Please specify the other format:"
 )
 ```
 
@@ -197,7 +200,7 @@ sd_next()
 
 ::: {.sd_page}
 
-### Mentorship: 
+### Mentorship {{< iconify streamline-color:global-learning >}}: 
 
 The next 6 questions all regard the <a href="https://mppaw.org/mentoring" target="_blank">MPPAW mentorship program</a>
 
@@ -293,7 +296,7 @@ sd_next()
 
 ::: {.sd_page}
 
-### Community Contribution & Volunteering: 
+### Community Contribution & Volunteering {{< iconify streamline-color:city-hall >}}: 
 
 ```{r}
 sd_question(
@@ -339,7 +342,7 @@ sd_question(
 sd_question(
   type  = "text",
   id    = "contribute2_other", 
-  label = "Please specify the motivation:"
+  label = "Please specify the other motivation:"
 )
 ```
 
@@ -351,7 +354,7 @@ sd_next()
 
 ::: {.sd_page}
 
-### Organizational Structure & Membership: 
+### Organizational Structure & Membership {{< iconify streamline-color:layers-1-flat >}}: 
 
 ```{r}
 sd_question(
@@ -404,7 +407,7 @@ sd_question(
 sd_question(
   type  = "text",
   id    = "structure3_other", 
-  label = "Please specify the type of enhanced programming:"
+  label = "Please specify the other type of enhanced programming:"
 )
 ```
 
@@ -428,7 +431,7 @@ sd_question(
 sd_question(
   type  = "text",
   id    = "structure4_other", 
-  label = "Please specify what you would like to give back:"
+  label = "Please specify what other way you would like to give back:"
 )
 ```
 
@@ -440,7 +443,7 @@ sd_next()
 
 ::: {.sd_page}
 
-### Demographics & Engagement Preferences: 
+### Demographics & Engagement Preferences {{< iconify streamline-color:user-profile-focus >}}: 
 
 ```{r}
 sd_question(
@@ -494,7 +497,7 @@ sd_question(
 sd_question(
   type  = "text",
   id    = "demo3_other", 
-  label = "Please specify how you typically learned:"
+  label = "Please specify the other way you typically learned:"
 )
 ```
 
@@ -522,7 +525,7 @@ sd_next()
 
 ::: {.sd_page id=end}
 
-## Thank you!
+## Thank you! {{< iconify streamline-color:waving-hand >}}
 
 Thank you for your time and input. 
 
@@ -530,7 +533,9 @@ Your responses will directly inform MPPAW's strategic direction for 2025-2026 an
 
 Please join us in-person or on Zoom on September 23 5:30-7:30 to review the results of this survey and participate in a lively discussion about the future of MPPAW. 
 
+<div style="text-align: center;">
 ![](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bHFneXdxYnZ0bmhoZjkyemwxeTMwbjBtZzdmd2t6a2w3aXR1YXF6YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Z0YRcYVJqXyavIR9t6/giphy.gif)
+</div>
 
 ```{r}
 sd_close()

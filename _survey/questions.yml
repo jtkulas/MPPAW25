@@ -22,7 +22,7 @@ engage2:
     Other: other
 engage2_other:
   type: text
-  label: 'Please specify the motivation:'
+  label: 'Please specify the other motivation:'
 engage3:
   type: mc_multiple
   label: Which of these factors, if any, have reduced your participation in MPPAW
@@ -38,7 +38,7 @@ engage3:
     Other: other
 engage3_other:
   type: text
-  label: 'Please specify the factor(s):'
+  label: 'Please specify the other factor(s):'
 top1:
   type: select
   label: Which of the following program formats would be most valuable to you? (Top
@@ -55,7 +55,7 @@ top1:
     Other: other
 top1_other:
   type: text
-  label: 'Please specify the format:'
+  label: 'Please specify the other format:'
 top2:
   type: select
   label: Which of the following program formats would be second most valuable to you?
@@ -72,7 +72,7 @@ top2:
     Other: other
 top2_other:
   type: text
-  label: 'Please specify the format:'
+  label: 'Please specify the other format:'
 top3:
   type: select
   label: Which of the following program formats would be third most valuable to you?
@@ -89,7 +89,7 @@ top3:
     Other: other
 top3_other:
   type: text
-  label: 'Please specify the format:'
+  label: 'Please specify the other format:'
 mentor1:
   type: mc
   label: Would you be likely to participate as a mentor?
@@ -217,7 +217,7 @@ contribute2:
     Other: other
 contribute2_other:
   type: text
-  label: 'Please specify the motivation:'
+  label: 'Please specify the other motivation:'
 structure1:
   type: mc
   label: How important is it to you that MPPAW continues to charge membership dues?
@@ -252,7 +252,7 @@ structure3:
     Other: other
 structure3_other:
   type: text
-  label: 'Please specify the type of enhanced programming:'
+  label: 'Please specify the other type of enhanced programming:'
 structure4:
   type: mc
   label: What would you most like to give back to the applied psychology community
@@ -267,7 +267,7 @@ structure4:
     Other: other
 structure4_other:
   type: text
-  label: 'Please specify what you would like to give back:'
+  label: 'Please specify what other way you would like to give back:'
 demo1:
   type: mc
   label: What best describes your current career stage?
@@ -301,7 +301,7 @@ demo3:
     Other: other
 demo3_other:
   type: text
-  label: 'Please specify how you typically learned:'
+  label: 'Please specify the other way you typically learned:'
 ideal:
   type: textarea
   label: If you could design the ideal professional organization for applied psychology
