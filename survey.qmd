@@ -1,9 +1,11 @@
 ---
-format: html
+format: 
+  html:
+    link-external-newwindow: true
 echo: false
 warning: false
 footer-left: "[MPPAW](https://mppaw.org/) 2025 Survey"
-footer-right: '[<i class="bi bi-github"></i> Source Code](https://github.com/jtkulas/MPPAW25)'
+footer-right: 'Please report issues with the survey [via <i class="bi bi-github"></i>](https://github.com/jtkulas/MPPAW25/issues)'
 ---
 
 ```{r}
@@ -60,6 +62,13 @@ sd_question(
     'Other'                                   = "other"
   )
 )
+
+# Target question
+sd_question(
+  type  = "text",
+  id    = "engage2_other", 
+  label = "Please specify the motivation:"
+)
 ```
 
 ```{r}
@@ -78,6 +87,13 @@ sd_question(
     'Other'                                   = "other"
   )
 )
+
+# Target question
+sd_question(
+  type  = "text",
+  id    = "engage3_other", 
+  label = "Please specify the factor(s):"
+)
 ```
 
 ```{r}
@@ -90,7 +106,7 @@ sd_next(next_page = 'page2')
 
 ### Future Programming Priorities: 
 
-Across the next three questions you'll be asked to rank your top 3 program formatting preferences:
+Please rank your **top 3** program formatting preferences:
 
 ```{r}
 sd_question(
@@ -109,6 +125,13 @@ sd_question(
     "Professional development certification programs"     = "certification",
     "Other"                                               = "other"
   )
+)
+
+# Target question
+sd_question(
+  type  = "text",
+  id    = "top1_other", 
+  label = "Please specify the format:"
 )
 ```
 
@@ -130,6 +153,13 @@ sd_question(
     "Other"                                               = "other"
   )
 )
+
+# Target question
+sd_question(
+  type  = "text",
+  id    = "top2_other", 
+  label = "Please specify the format:"
+)
 ```
 
 ```{r}
@@ -150,6 +180,13 @@ sd_question(
     "Other"                                               = "other"
   )
 )
+
+# Target question
+sd_question(
+  type  = "text",
+  id    = "top3_other", 
+  label = "Please specify the format:"
+)
 ```
 
 ```{r}
@@ -162,7 +199,7 @@ sd_next()
 
 ### Mentorship: 
 
-The next 6 questions all regard the [MPPAW mentorship program](https://mppaw.org/mentoring).
+The next 6 questions all regard the <a href="https://mppaw.org/mentoring" target="_blank">MPPAW mentorship program</a>
 
 ```{r}
 sd_question(
@@ -297,6 +334,13 @@ sd_question(
     "Other"                                      = "other"
   )
 )
+
+# Target question
+sd_question(
+  type  = "text",
+  id    = "contribute2_other", 
+  label = "Please specify the motivation:"
+)
 ```
 
 ```{r}
@@ -355,6 +399,13 @@ sd_question(
     "Other"                                      = "other"
   )
 )
+
+# Target question
+sd_question(
+  type  = "text",
+  id    = "structure3_other", 
+  label = "Please specify the type of enhanced programming:"
+)
 ```
 
 ```{r}
@@ -371,6 +422,13 @@ sd_question(
     "Advocate for the profession"  = "advocate",
     "Other" = "other"
   )
+)
+
+# Target question
+sd_question(
+  type  = "text",
+  id    = "structure4_other", 
+  label = "Please specify what you would like to give back:"
 )
 ```
 
@@ -430,6 +488,13 @@ sd_question(
     "Other professional networks"       = "profess",
     "Other"                             = "other"
   )
+)
+
+# Target question
+sd_question(
+  type  = "text",
+  id    = "demo3_other", 
+  label = "Please specify how you typically learned:"
 )
 ```
 

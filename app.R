@@ -40,7 +40,17 @@ server <- function(input, output, session) {
   sd_skip_forward()
 
   # Define any conditional display logic here (show a question if a condition is true)
-  sd_show_if()
+  sd_show_if(
+    input$engage2 == "other" ~ "engage2_other", 
+    input$engage3 == "other" ~ "engage3_other",
+    input$top1 == "other" ~ "top1_other",
+    input$top2 == "other" ~ "top2_other",
+    input$top3 == "other" ~ "top3_other",
+    input$contribute2 == "other" ~ "contribute2_other",
+    input$structure3 == "other" ~ "structure3_other",
+    input$structure4 == "other" ~ "structure4_other",
+    input$demo3 == "other" ~ "demo3_other"
+    )
 
   # Database designation and other settings
   sd_server(

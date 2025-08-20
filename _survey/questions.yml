@@ -20,6 +20,9 @@ engage2:
     Contributing to the applied psychology community: contributing
     Student/early career support: students
     Other: other
+engage2_other:
+  type: text
+  label: 'Please specify the motivation:'
 engage3:
   type: mc_multiple
   label: Which of these factors, if any, have reduced your participation in MPPAW
@@ -33,6 +36,9 @@ engage3:
     Post-pandemic preference for virtual engagement -- Other priorities took precedence: covid
     Events don't provide enough networking opportunity: networking
     Other: other
+engage3_other:
+  type: text
+  label: 'Please specify the factor(s):'
 top1:
   type: select
   label: Which of the following program formats would be most valuable to you? (Top
@@ -47,6 +53,9 @@ top1:
     Virtual networking sessions: virtual
     Professional development certification programs: certification
     Other: other
+top1_other:
+  type: text
+  label: 'Please specify the format:'
 top2:
   type: select
   label: Which of the following program formats would be second most valuable to you?
@@ -61,6 +70,9 @@ top2:
     Virtual networking sessions: virtual
     Professional development certification programs: certification
     Other: other
+top2_other:
+  type: text
+  label: 'Please specify the format:'
 top3:
   type: select
   label: Which of the following program formats would be third most valuable to you?
@@ -75,6 +87,9 @@ top3:
     Virtual networking sessions: virtual
     Professional development certification programs: certification
     Other: other
+top3_other:
+  type: text
+  label: 'Please specify the format:'
 mentor1:
   type: mc
   label: Would you be likely to participate as a mentor?
@@ -200,6 +215,9 @@ contribute2:
     Building my own network/visibility: network
     Flexible, remote volunteering options: flexible
     Other: other
+contribute2_other:
+  type: text
+  label: 'Please specify the motivation:'
 structure1:
   type: mc
   label: How important is it to you that MPPAW continues to charge membership dues?
@@ -232,6 +250,9 @@ structure3:
     Additional member services (career resources, online platform, etc.): services
     Scholarships or subsidies for members: subsidies
     Other: other
+structure3_other:
+  type: text
+  label: 'Please specify the type of enhanced programming:'
 structure4:
   type: mc
   label: What would you most like to give back to the applied psychology community
@@ -244,6 +265,9 @@ structure4:
     Create inclusive opportunities for underrepresented groups: inclusive
     Advocate for the profession: advocate
     Other: other
+structure4_other:
+  type: text
+  label: 'Please specify what you would like to give back:'
 demo1:
   type: mc
   label: What best describes your current career stage?
@@ -275,6 +299,9 @@ demo3:
     MPPAW website: website
     Other professional networks: profess
     Other: other
+demo3_other:
+  type: text
+  label: 'Please specify how you typically learned:'
 ideal:
   type: textarea
   label: If you could design the ideal professional organization for applied psychology
