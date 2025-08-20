@@ -95,9 +95,9 @@ mentor3:
   type: mc
   label: What mentoring time commitment works best for your schedule?
   options:
-    1--3 months: '1'
-    3--6 months: '3'
-    6--12 months: '6'
+    1-3 months: '1'
+    3-6 months: '3'
+    6-12 months: '6'
     Ongoing/flexible timing: flex
 mentor4:
   type: mc_multiple
@@ -123,4 +123,164 @@ mentor6:
     In-person meetings only: inperson
     Hybrid (combination of virtual and in-person): hybrid
     Asynchronous communication (email, messaging platforms): asynch
+contribute1:
+  type: matrix
+  label: How interested would you be in contributing to MPPAW in the following ways?
+  options:
+    Very interested: '3'
+    Somewhat interested: '2'
+    Not interested: '1'
+  row:
+    Serving on the board of directors: board
+    Helping plan/organize events: organize
+    Speaking at events or leading workshops: speak
+    Mentoring other members: mentor
+    Recruiting new members: recruit
+    Social media/marketing support: market
+    Administrative/operational support: admin
+contribute1_board:
+  type: mc
+  label: []
+  options:
+    Very interested: '3'
+    Somewhat interested: '2'
+    Not interested: '1'
+contribute1_organize:
+  type: mc
+  label: []
+  options:
+    Very interested: '3'
+    Somewhat interested: '2'
+    Not interested: '1'
+contribute1_speak:
+  type: mc
+  label: []
+  options:
+    Very interested: '3'
+    Somewhat interested: '2'
+    Not interested: '1'
+contribute1_mentor:
+  type: mc
+  label: []
+  options:
+    Very interested: '3'
+    Somewhat interested: '2'
+    Not interested: '1'
+contribute1_recruit:
+  type: mc
+  label: []
+  options:
+    Very interested: '3'
+    Somewhat interested: '2'
+    Not interested: '1'
+contribute1_market:
+  type: mc
+  label: []
+  options:
+    Very interested: '3'
+    Somewhat interested: '2'
+    Not interested: '1'
+contribute1_admin:
+  type: mc
+  label: []
+  options:
+    Very interested: '3'
+    Somewhat interested: '2'
+    Not interested: '1'
+contribute2:
+  type: mc_multiple
+  label: What would motivate you to volunteer more with MPPAW? (Select all that apply)
+  options:
+    Clearer time commitments upfront: clearer
+    Smaller, more defined tasks: smaller
+    Recognition for contributions: recog
+    Professional development opportunities through volunteering: devel
+    Working with specific people I know: working
+    Contributing to causes I care about: contribute
+    Building my own network/visibility: network
+    Flexible, remote volunteering options: flexible
+    Other: other
+structure1:
+  type: mc
+  label: How important is it to you that MPPAW continues to charge membership dues?
+  options:
+    Very important - dues ensure commitment and fund activities: '4'
+    Somewhat important - reasonable dues are acceptable: '3'
+    Not important - prefer free or donation-based model: '2'
+    Don't know/no opinion: '1'
+structure2:
+  type: mc
+  label: Would you support higher membership dues if they enabled significantly enhanced
+    programming and services?
+  options:
+    Yes, I would support a substantial increase (50%+ higher) for premium programming: '6'
+    Yes, I would support a moderate increase (25-50% higher) for improved programming: '5'
+    Yes, I would support a small increase (up to 25% higher) for some enhancements: '4'
+    No, I prefer to keep dues at the current level: '3'
+    No, I would prefer lower dues even if it means fewer programs: '2'
+    It depends on what specific enhancements would be offered: '1'
+structure3:
+  type: mc_multiple
+  label: What types of enhanced programming would justify higher dues to you? (Select
+    all that apply)
+  options:
+    Higher-caliber speakers and events (e.g., speaker compensation and travel): caliber
+    More frequent programming: frequent
+    Professional development workshops: workshops
+    Enhanced networking opportunities: network
+    Better venues and catering: venues
+    Additional member services (career resources, online platform, etc.): services
+    Scholarships or subsidies for members: subsidies
+    Other: other
+structure4:
+  type: mc
+  label: What would you most like to give back to the applied psychology community
+    through MPPAW?
+  options:
+    Share my professional expertise: share
+    Support students/early career professionals: support
+    Help build professional networks: build
+    Advance the field through research/practice sharing: advance
+    Create inclusive opportunities for underrepresented groups: inclusive
+    Advocate for the profession: advocate
+    Other: other
+demo1:
+  type: mc
+  label: What best describes your current career stage?
+  options:
+    Student (undergraduate): under
+    Student (graduate): grad
+    Early career (0-5 years post-graduation): early
+    Mid-career (6-15 years): mid
+    Senior professional (15+ years): senior
+    Retired/transitioning out of full time work: retired
+demo2:
+  type: mc
+  label: What’s your preferred way to engage with professional organizations?
+  options:
+    In-person events primarily: person
+    Virtual events primarily: virtual
+    Hybrid approach: hybrid
+    Online community/discussion forums: online
+    One-on-one connections: connect
+    Project-based collaboration: project
+demo3:
+  type: mc
+  label: How did you typically learn about MPPAW events in the past?
+  options:
+    Email newsletters: email
+    LinkedIn: linked
+    Word of mouth: word
+    University/academic connections: academic
+    MPPAW website: website
+    Other professional networks: profess
+    Other: other
+ideal:
+  type: textarea
+  label: If you could design the ideal professional organization for applied psychology
+    professionals in Minnesota, what would it look like? (2-3 sentences)
+anyelse:
+  type: textarea
+  label: Is there anything else you’d like the MPPAW board to know as we plan for
+    the future?
 

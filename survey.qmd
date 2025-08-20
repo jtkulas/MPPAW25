@@ -254,12 +254,218 @@ sd_next()
 
 :::
 
+::: {.sd_page}
+
+### Community Contribution & Volunteering: 
+
+```{r}
+sd_question(
+  type   = "matrix",
+  id     = "contribute1",
+  label  = "How interested would you be in contributing to MPPAW in the following ways?",
+  row    = c(
+    "Serving on the board of directors"     = "board",
+    "Helping plan/organize events"          = "organize",
+    "Speaking at events or leading workshops"    = "speak",
+    "Mentoring other members"               = "mentor",
+    "Recruiting new members"                = "recruit",
+    "Social media/marketing support"        = "market",
+    "Administrative/operational support"    = "admin"
+  ),
+  option = c(
+    "Very interested" = "3",
+    "Somewhat interested"  = "2",
+    "Not interested"    = "1"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc_multiple',
+  id    = 'contribute2',
+  label = "What would motivate you to volunteer more with MPPAW? (Select all that apply)",
+  option = c(
+    "Clearer time commitments upfront"   = "clearer",
+    "Smaller, more defined tasks"        = "smaller",
+    "Recognition for contributions"      = "recog",
+    "Professional development opportunities through volunteering" = "devel",
+    "Working with specific people I know"        = "working",
+    "Contributing to causes I care about"        = "contribute",
+    "Building my own network/visibility"         = "network",
+    "Flexible, remote volunteering options"      = "flexible",
+    "Other"                                      = "other"
+  )
+)
+```
+
+```{r}
+sd_next()
+```
+
+:::
+
+::: {.sd_page}
+
+### Organizational Structure & Membership: 
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'structure1',
+  label = "How important is it to you that MPPAW continues to charge membership dues?",
+  option = c(
+    "Very important - dues ensure commitment and fund activities"   = "4",
+    "Somewhat important - reasonable dues are acceptable"           = "3",
+    "Not important - prefer free or donation-based model"           = "2",
+    "Don't know/no opinion"    = "1"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'structure2',
+  label = "Would you support higher membership dues if they enabled significantly enhanced programming and services?",
+  option = c(
+    "Yes, I would support a substantial increase (50%+ higher) for premium programming"   = "6",
+    "Yes, I would support a moderate increase (25-50% higher) for improved programming"           = "5",
+    "Yes, I would support a small increase (up to 25% higher) for some enhancements"           = "4",
+    "No, I prefer to keep dues at the current level"    = "3",
+    "No, I would prefer lower dues even if it means fewer programs" = "2",
+    "It depends on what specific enhancements would be offered"  = "1"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc_multiple',
+  id    = 'structure3',
+  label = "What types of enhanced programming would justify higher dues to you? (Select all that apply)",
+  option = c(
+    "Higher-caliber speakers and events (e.g., speaker compensation and travel)"   = "caliber",
+    "More frequent programming"               = "frequent",
+    "Professional development workshops"      = "workshops",
+    "Enhanced networking opportunities"       = "network",
+    "Better venues and catering"              = "venues",
+    "Additional member services (career resources, online platform, etc.)"  = "services",
+    "Scholarships or subsidies for members"         = "subsidies",
+    "Other"                                      = "other"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'structure4',
+  label = "What would you **most** like to give back to the applied psychology community through MPPAW?",
+  option = c(
+    "Share my professional expertise"               = "share",
+    "Support students/early career professionals"   = "support",
+    "Help build professional networks"              = "build",
+    "Advance the field through research/practice sharing"    = "advance",
+    "Create inclusive opportunities for underrepresented groups" = "inclusive",
+    "Advocate for the profession"  = "advocate",
+    "Other" = "other"
+  )
+)
+```
+
+```{r}
+sd_next()
+```
+
+:::
+
+::: {.sd_page}
+
+### Demographics & Engagement Preferences: 
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'demo1',
+  label = "What best describes your current career stage?",
+  option = c(
+    "Student (undergraduate)"                    = "under",
+    "Student (graduate)"                         = "grad",
+    "Early career (0-5 years post-graduation)"   = "early",
+    "Mid-career (6-15 years)"                    = "mid",
+    "Senior professional (15+ years)"            = "senior",
+    "Retired/transitioning out of full time work" = "retired"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'demo2',
+  label = "What's your preferred way to engage with professional organizations?",
+  option = c(
+    "In-person events primarily"           = "person",
+    "Virtual events primarily"             = "virtual",
+    "Hybrid approach"                      = "hybrid",
+    "Online community/discussion forums"   = "online",
+    "One-on-one connections"               = "connect",
+    "Project-based collaboration"          = "project"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'demo3',
+  label = "How did you *typically* learn about MPPAW events in the past?",
+  option = c(
+    "Email newsletters"             = "email",
+    "LinkedIn"                      = "linked",
+    "Word of mouth"                     = "word",
+    "University/academic connections"   = "academic",
+    "MPPAW website"                     = "website",
+    "Other professional networks"       = "profess",
+    "Other"                             = "other"
+  )
+)
+```
+
+```{r}
+sd_question(
+  type  = "textarea",
+  id    = "ideal",
+  label = "If you could design the ideal professional organization for applied psychology professionals in Minnesota, what would it look like? (2-3 sentences)"
+)
+```
+
+```{r}
+sd_question(
+  type  = "textarea",
+  id    = "anyelse",
+  label = "Is there anything else you'd like the MPPAW board to know as we plan for the future?"
+)
+```
+
+```{r}
+sd_next()
+```
+
+:::
 
 ::: {.sd_page id=end}
 
-## End
+## Thank you!
 
-This it the last page in the survey.
+Thank you for your time and input. 
+
+Your responses will directly inform MPPAW's strategic direction for 2025-2026 and beyond.
+
+Please join us in-person or on Zoom on September 23 5:30-7:30 to review the results of this survey and participate in a lively discussion about the future of MPPAW. 
+
+![](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bHFneXdxYnZ0bmhoZjkyemwxeTMwbjBtZzdmd2t6a2w3aXR1YXF6YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Z0YRcYVJqXyavIR9t6/giphy.gif)
 
 ```{r}
 sd_close()
