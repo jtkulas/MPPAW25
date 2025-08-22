@@ -5,7 +5,7 @@ account: jtkulas
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 15231484
-bundleId: 10797192
+bundleId: 10806862
 url: https://jtkulas.shinyapps.io/MPPAW25/
 version: 1
 asMultiple: FALSE

@@ -5,7 +5,7 @@ format:
 echo: false
 warning: false
 footer-left: "[MPPAW](https://mppaw.org/) 2025 Survey"
-footer-right: 'Please report issues with the survey [via <i class="bi bi-github"></i>](https://github.com/jtkulas/MPPAW25/issues)'
+footer-right: 'Provide survey feedback via [submitting a <i class="bi bi-github"></i> Issue](https://github.com/jtkulas/MPPAW25/issues)'
 ---
 
 ```{r}
@@ -40,11 +40,11 @@ sd_question(
   id    = 'engage1',
   label = "How would you describe your current level of engagement with MPPAW?",
   option = c(
-    'Very active (attend most events, volunteer regularly)'    = "5",
-    'Moderately active (attend some events, occasional volunteering)' = "4",
-    'Minimally active (attend rarely, no volunteering)'        = "3",
-    'Not currently active but interested in re-engaging'       = "2",
-    'Not currently active and unlikely to re-engage'           = "1"
+    'Very active (attend most events, volunteer regularly)'    = "very",
+    'Moderately active (attend some events, occasional volunteering)' = "moderately",
+    'Minimally active (attend rarely, no volunteering)'        = "minimally",
+    'Not currently active but interested in re-engaging'       = "interested",
+    'Not currently active and unlikely to re-engage'           = "unlikely"
   )
 )
 ```
@@ -107,7 +107,7 @@ sd_next(next_page = 'page2')
 
 ::: {.sd_page id=page2}
 
-### Future Programming Priorities {{< iconify streamline-color:hand-held-tablet-writing >}}: 
+### Future Programming Priorities {{< iconify streamline-color:class-lesson >}}: 
 
 Please rank your **top 3** program formatting preferences:
 
@@ -115,8 +115,7 @@ Please rank your **top 3** program formatting preferences:
 sd_question(
   type  = 'select',
   id    = 'top1',
-  label = "Which of the following program formats would be **most** valuable to you? (Top choice)
-",
+  label = "Which of the following program formats would be **most** valuable to you? (Top choice)",
   option = c(
     "Expanded mentorship program (structured mentor/mentee matching)" = "mentor",
     "Large annual networking event/conference"           = "network",
@@ -142,8 +141,7 @@ sd_question(
 sd_question(
   type  = 'select',
   id    = 'top2',
-  label = "Which of the following program formats would be **second most** valuable to you? (second best choice)
-",
+  label = "Which of the following program formats would be **second most** valuable to you? (second best choice)",
   option = c(
     "Expanded mentorship program (structured mentor/mentee matching)" = "mentor",
     "Large annual networking event/conference"           = "network",
@@ -169,8 +167,7 @@ sd_question(
 sd_question(
   type  = 'select',
   id    = 'top3',
-  label = "Which of the following program formats would be **third most** valuable to you? (third best choice)
-",
+  label = "Which of the following program formats would be **third most** valuable to you? (third best choice)",
   option = c(
     "Expanded mentorship program (structured mentor/mentee matching)" = "mentor",
     "Large annual networking event/conference"           = "network",
@@ -304,7 +301,6 @@ sd_question(
   id     = "contribute1",
   label  = "How interested would you be in contributing to MPPAW in the following ways?",
   row    = c(
-    "Serving on the board of directors"     = "board",
     "Helping plan/organize events"          = "organize",
     "Speaking at events or leading workshops"    = "speak",
     "Mentoring other members"               = "mentor",
@@ -317,6 +313,27 @@ sd_question(
     "Somewhat interested"  = "2",
     "Not interested"    = "1"
   )
+)
+```
+
+```{r}
+
+sd_question(
+  type  = 'mc',
+  id    = 'contribute1b',
+  label = "How interested would you be in serving on the MPPAW board of directors?",
+  option = c(
+    "Very interested"      = "3",
+    "Somewhat interested"  = "2",
+    "Not interested"       = "1"
+  )
+)
+## Open up e-mail box if indicate very interested
+# Target question
+sd_question(
+  type  = "text",
+  id    = "contribute1b_other", 
+  label = "Please enter your e-mail if you would like to be contacted about serving on the board of directors:"
 )
 ```
 
@@ -354,7 +371,7 @@ sd_next()
 
 ::: {.sd_page}
 
-### Organizational Structure & Membership {{< iconify streamline-color:layers-1-flat >}}: 
+### Organizational Structure & Membership {{< iconify streamline-color:blood-donate-drop >}}: 
 
 ```{r}
 sd_question(
@@ -443,7 +460,19 @@ sd_next()
 
 ::: {.sd_page}
 
-### Demographics & Engagement Preferences {{< iconify streamline-color:user-profile-focus >}}: 
+### Demographics & Engagement Preferences {{< iconify streamline-color:information-desk >}}: 
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'demo1a',
+  label = "Have you held an active MPPAW membership *at least once* within the past 3 years?",
+  option = c(
+    "Yes" = "yes",
+    "No"  = "no"
+  )
+)
+```
 
 ```{r}
 sd_question(
@@ -531,14 +560,31 @@ Thank you for your time and input.
 
 Your responses will directly inform MPPAW's strategic direction for 2025-2026 and beyond.
 
-Please join us in-person or on Zoom on September 23 5:30-7:30 to review the results of this survey and participate in a lively discussion about the future of MPPAW. 
+Please join us in-person or on Zoom on September 23 5:30-7:30 to review the results of this survey and <a href="https://mppaw.org/event-6295564" target="_blank">participate in a lively discussion</a> about the future of MPPAW. 
 
-<div style="text-align: center;">
-![](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bHFneXdxYnZ0bmhoZjkyemwxeTMwbjBtZzdmd2t6a2w3aXR1YXF6YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Z0YRcYVJqXyavIR9t6/giphy.gif)
-</div>
+```{r}
+
+sd_redirect(
+  id = "RSVP",
+  url = "https://forms.gle/8JaK22tcnBzEcRao8",
+  label = "RSVP for Sep 23",
+  button = TRUE,
+  newtab = TRUE
+)
+
+## https://mppaw.org/event-6295564
+
+```
 
 ```{r}
 sd_close()
 ```
 
+<div style="text-align: center;">
+![](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bHFneXdxYnZ0bmhoZjkyemwxeTMwbjBtZzdmd2t6a2w3aXR1YXF6YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Z0YRcYVJqXyavIR9t6/giphy.gif)
+</div>
+
 :::
+
+
+ 

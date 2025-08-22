@@ -4,11 +4,11 @@ engage1:
   type: mc
   label: How would you describe your current level of engagement with MPPAW?
   options:
-    Very active (attend most events, volunteer regularly): '5'
-    Moderately active (attend some events, occasional volunteering): '4'
-    Minimally active (attend rarely, no volunteering): '3'
-    Not currently active but interested in re-engaging: '2'
-    Not currently active and unlikely to re-engage: '1'
+    Very active (attend most events, volunteer regularly): very
+    Moderately active (attend some events, occasional volunteering): moderately
+    Minimally active (attend rarely, no volunteering): minimally
+    Not currently active but interested in re-engaging: interested
+    Not currently active and unlikely to re-engage: unlikely
 engage2:
   type: mc_multiple
   label: What initially motivated you to join MPPAW? (Select all that apply)
@@ -146,20 +146,12 @@ contribute1:
     Somewhat interested: '2'
     Not interested: '1'
   row:
-    Serving on the board of directors: board
     Helping plan/organize events: organize
     Speaking at events or leading workshops: speak
     Mentoring other members: mentor
     Recruiting new members: recruit
     Social media/marketing support: market
     Administrative/operational support: admin
-contribute1_board:
-  type: mc
-  label: []
-  options:
-    Very interested: '3'
-    Somewhat interested: '2'
-    Not interested: '1'
 contribute1_organize:
   type: mc
   label: []
@@ -202,6 +194,17 @@ contribute1_admin:
     Very interested: '3'
     Somewhat interested: '2'
     Not interested: '1'
+contribute1b:
+  type: mc
+  label: How interested would you be in serving on the MPPAW board of directors?
+  options:
+    Very interested: '3'
+    Somewhat interested: '2'
+    Not interested: '1'
+contribute1b_other:
+  type: text
+  label: 'Please enter your e-mail if you would like to be contacted about serving
+    on the board of directors:'
 contribute2:
   type: mc_multiple
   label: What would motivate you to volunteer more with MPPAW? (Select all that apply)
@@ -268,6 +271,13 @@ structure4:
 structure4_other:
   type: text
   label: 'Please specify what other way you would like to give back:'
+demo1a:
+  type: mc
+  label: Have you held an active MPPAW membership at least once within the past 3
+    years?
+  options:
+    'Yes': 'yes'
+    'No': 'no'
 demo1:
   type: mc
   label: What best describes your current career stage?
@@ -303,11 +313,11 @@ demo3_other:
   type: text
   label: 'Please specify the other way you typically learned:'
 ideal:
-  type: textarea
+  type: unknown
   label: If you could design the ideal professional organization for applied psychology
     professionals in Minnesota, what would it look like? (2-3 sentences)
 anyelse:
-  type: textarea
+  type: unknown
   label: Is there anything else you’d like the MPPAW board to know as we plan for
     the future?
 
