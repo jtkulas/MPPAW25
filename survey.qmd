@@ -85,7 +85,8 @@ sd_question(
     'Content not relevant to my current needs'        = "content",
     'Prefer online professional communities (LinkedIn, Reddit, etc.)'        = "communities",
     'Geographic distance/location issues'           = "distance",
-    'Post-pandemic preference for virtual engagement -- Other priorities took precedence'            = "covid",
+    'Post-pandemic preference for virtual engagement'            = "covid",
+    'Other priorities took precedence'              = "priorities",
     "Events don't provide enough networking opportunity" = "networking",
     'Other'                                   = "other"
   )
@@ -465,70 +466,82 @@ sd_next()
 ```{r}
 sd_question(
   type  = 'mc',
-  id    = 'demo1a',
+  id    = 'demo1',
   label = "Have you held an active MPPAW membership *at least once* within the past 3 years?",
   option = c(
     "Yes" = "yes",
-    "No"  = "no"
+    "No" = "no"
   )
 )
-```
 
-```{r}
-sd_question(
-  type  = 'mc',
-  id    = 'demo1',
-  label = "What best describes your current career stage?",
-  option = c(
-    "Student (undergraduate)"                    = "under",
-    "Student (graduate)"                         = "grad",
-    "Early career (0-5 years post-graduation)"   = "early",
-    "Mid-career (6-15 years)"                    = "mid",
-    "Senior professional (15+ years)"            = "senior",
-    "Retired/transitioning out of full time work" = "retired"
-  )
-)
 ```
 
 ```{r}
 sd_question(
   type  = 'mc',
   id    = 'demo2',
-  label = "What's your preferred way to engage with professional organizations?",
+  label = "What best describes your current career stage?",
   option = c(
-    "In-person events primarily"           = "person",
-    "Virtual events primarily"             = "virtual",
-    "Hybrid approach"                      = "hybrid",
-    "Online community/discussion forums"   = "online",
-    "One-on-one connections"               = "connect",
-    "Project-based collaboration"          = "project"
+    "Student (undergraduate)"               = "undergrad",
+    "Student (graduate)"   = "grad",
+    "Early career (0-5 years post-graduation)"              = "early",
+    "Mid-career (6-15 years)"    = "mid",
+    "Senior professional (15+ years)" = "senior",
+    "Retired/transitioning out of full time work"  = "retired"
   )
 )
+
 ```
 
 ```{r}
 sd_question(
   type  = 'mc',
   id    = 'demo3',
+  label = "What's your preferred way to engage with professional organizations?",
+  option = c(
+    "In-person events primarily"               = "person",
+    "Virtual events primarily"   = "virtual",
+    "Hybrid approach"              = "hybrid",
+    "Online community/discussion forums"    = "online",
+    "One-on-one connections" = "oneone",
+    "Project-based collaboration" = "project"
+  )
+)
+
+```
+
+```{r}
+sd_question(
+  type  = 'mc',
+  id    = 'demo4',
   label = "How did you *typically* learn about MPPAW events in the past?",
   option = c(
-    "Email newsletters"             = "email",
-    "LinkedIn"                      = "linked",
-    "Word of mouth"                     = "word",
-    "University/academic connections"   = "academic",
-    "MPPAW website"                     = "website",
-    "Other professional networks"       = "profess",
-    "Other"                             = "other"
+    "Email newsletters"               = "newsletter",
+    "LinkedIn"   = "linkedin",
+    "Word of mouth"              = "word",
+    "University/academic connections"    = "academic",
+    "MPPAW website" = "website",
+    "Other professional networks"  = "professional",
+    "Other" = "other"
   )
 )
 
 # Target question
 sd_question(
   type  = "text",
-  id    = "demo3_other", 
-  label = "Please specify the other way you typically learned:"
+  id    = "demo4_other", 
+  label = "Please specify the other way you would typically learn:"
 )
+
+sd_next()
+
 ```
+
+::: 
+
+::: {.sd_page}
+
+### Care to share any other thoughts? {{< iconify streamline-color:collaborations-idea >}}
 
 ```{r}
 sd_question(
@@ -539,15 +552,14 @@ sd_question(
 ```
 
 ```{r}
+
 sd_question(
   type  = "textarea",
   id    = "anyelse",
   label = "Is there anything else you'd like the MPPAW board to know as we plan for the future?"
 )
-```
 
-```{r}
-sd_next()
+sd_next(next_page = 'end')
 ```
 
 :::

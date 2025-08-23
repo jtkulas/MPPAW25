@@ -33,7 +33,8 @@ engage3:
     Content not relevant to my current needs: content
     Prefer online professional communities (LinkedIn, Reddit, etc.): communities
     Geographic distance/location issues: distance
-    Post-pandemic preference for virtual engagement -- Other priorities took precedence: covid
+    Post-pandemic preference for virtual engagement: covid
+    Other priorities took precedence: priorities
     Events don't provide enough networking opportunity: networking
     Other: other
 engage3_other:
@@ -271,24 +272,24 @@ structure4:
 structure4_other:
   type: text
   label: 'Please specify what other way you would like to give back:'
-demo1a:
+demo1:
   type: mc
   label: Have you held an active MPPAW membership at least once within the past 3
     years?
   options:
     'Yes': 'yes'
     'No': 'no'
-demo1:
+demo2:
   type: mc
   label: What best describes your current career stage?
   options:
-    Student (undergraduate): under
+    Student (undergraduate): undergrad
     Student (graduate): grad
     Early career (0-5 years post-graduation): early
     Mid-career (6-15 years): mid
     Senior professional (15+ years): senior
     Retired/transitioning out of full time work: retired
-demo2:
+demo3:
   type: mc
   label: What’s your preferred way to engage with professional organizations?
   options:
@@ -296,22 +297,22 @@ demo2:
     Virtual events primarily: virtual
     Hybrid approach: hybrid
     Online community/discussion forums: online
-    One-on-one connections: connect
+    One-on-one connections: oneone
     Project-based collaboration: project
-demo3:
+demo4:
   type: mc
   label: How did you typically learn about MPPAW events in the past?
   options:
-    Email newsletters: email
-    LinkedIn: linked
+    Email newsletters: newsletter
+    LinkedIn: linkedin
     Word of mouth: word
     University/academic connections: academic
     MPPAW website: website
-    Other professional networks: profess
+    Other professional networks: professional
     Other: other
-demo3_other:
+demo4_other:
   type: text
-  label: 'Please specify the other way you typically learned:'
+  label: 'Please specify the other way you would typically learn:'
 ideal:
   type: unknown
   label: If you could design the ideal professional organization for applied psychology

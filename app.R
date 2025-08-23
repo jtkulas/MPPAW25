@@ -26,7 +26,7 @@ library(surveydown)
 # doing local testing. Once you're ready to collect survey responses, set
 # ignore = FALSE or just delete this argument.
 
-db <- sd_db_connect(ignore = FALSE)
+db <- sd_db_connect()
 
 # UI setup --------------------------------------------------------------------
 
@@ -46,16 +46,17 @@ server <- function(input, output, session) {
     !is.null(input$top1) && isTRUE(any(tolower(input$top1) == "other")) ~ "top1_other",
     !is.null(input$top2) && isTRUE(any(tolower(input$top2) == "other")) ~ "top2_other",
     !is.null(input$top3) && isTRUE(any(tolower(input$top3) == "other")) ~ "top3_other",
+    !is.null(input$contribute1b) && isTRUE(any(tolower(input$contribute1b) == "3")) ~ "contribute1b_other",
     !is.null(input$contribute2) && isTRUE(any(tolower(input$contribute2) == "other")) ~ "contribute2_other",
     !is.null(input$structure3) && isTRUE(any(tolower(input$structure3) == "other")) ~ "structure3_other",
     !is.null(input$structure4) && isTRUE(any(tolower(input$structure4) == "other")) ~ "structure4_other",
-    !is.null(input$demo3) && isTRUE(any(tolower(input$demo3) == "other")) ~ "demo3_other",
-    !is.null(input$contribute1b) && isTRUE(any(tolower(input$contribute1b) == "3")) ~ "contribute1b_other"
+    input$demo4 == "other" ~ "demo4_other" 
 )
   
   # Database designation and other settings
   sd_server(
-    db = db
+    db = db,
+    use_cookies=FALSE     ## just for testing
   )
 
 }
