@@ -28,6 +28,7 @@ engage3:
   label: Which of these factors, if any, have reduced your participation in MPPAW
     activities? (Select all that apply)
   options:
+    I haven't reduced my participation: notreduced
     Time constraints/busy schedule: constraints
     Event timing doesn't work for me: timing
     Content not relevant to my current needs: content
@@ -268,6 +269,7 @@ structure4:
     Advance the field through research/practice sharing: advance
     Create inclusive opportunities for underrepresented groups: inclusive
     Advocate for the profession: advocate
+    Attend and participate in meetings: attend
     Other: other
 structure4_other:
   type: text
@@ -301,7 +303,7 @@ demo3:
     Project-based collaboration: project
 demo4:
   type: mc
-  label: How did you typically learn about MPPAW events in the past?
+  label: How have you primarily learned about MPPAW events?
   options:
     Email newsletters: newsletter
     LinkedIn: linkedin

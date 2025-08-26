@@ -80,6 +80,7 @@ sd_question(
   id    = 'engage3',
   label = "Which of these factors, if any, have reduced your participation in MPPAW activities? (Select all that apply)",
   option = c(
+    "I haven't reduced my participation"             = "notreduced",
     'Time constraints/busy schedule'                 = "constraints",
     "Event timing doesn't work for me"           = "timing",
     'Content not relevant to my current needs'        = "content",
@@ -110,7 +111,7 @@ sd_next(next_page = 'page2')
 
 ### Future Programming Priorities {{< iconify streamline-color:class-lesson >}}: 
 
-Please rank your **top 3** program formatting preferences:
+Please rank your **top 3** program formatting preferences (it is okay to "leave the response blank" if you do not have a second or third preference):
 
 ```{r}
 sd_question(
@@ -441,6 +442,7 @@ sd_question(
     "Advance the field through research/practice sharing"    = "advance",
     "Create inclusive opportunities for underrepresented groups" = "inclusive",
     "Advocate for the profession"  = "advocate",
+    "Attend and participate in meetings"   =   "attend",
     "Other" = "other"
   )
 )
@@ -514,7 +516,7 @@ sd_question(
 sd_question(
   type  = 'mc',
   id    = 'demo4',
-  label = "How did you *typically* learn about MPPAW events in the past?",
+  label = "How have you *primarily* learned about MPPAW events?",
   option = c(
     "Email newsletters"               = "newsletter",
     "LinkedIn"   = "linkedin",
